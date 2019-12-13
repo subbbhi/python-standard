@@ -1,0 +1,31 @@
+ version: 2
+ jobs:
+   test:
+     docker:
+       - image: circleci/python:latest
+     steps:
+       - checkout
+       - run:
+          name: Install dependencies
+          command: |
+            pip install pytest --user
+            pip install pytest-cov --user
+      - run:
+          name: Generate coverage report
+          command: pytest --cov=./ --cov-report=xml
+      - run:
+          name: Upload coverage report to Codecov
+          command: bash <(curl https://codecov.io/bash)
+      - run:
+          name: Validate coverage data
+          command: python ./src/request.py
+
+workflows:
+  version: 2
+  to-be-scheduled:
+    jobs:
+      - test:
+          filters:
+            branches:
+              only:
+                - circle-ci
