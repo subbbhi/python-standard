@@ -1,11 +1,11 @@
- version: 2
- jobs:
-   test:
-     docker:
-       - image: circleci/python:latest
-     steps:
-       - checkout
-       - run:
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/python:latest
+    steps:
+      - checkout
+      - run:
           name: Install dependencies
           command: |
             pip install pytest --user
