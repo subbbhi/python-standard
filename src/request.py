@@ -22,9 +22,12 @@ coverage_percentage = commit_data['totals']['c']
 print("Ensuring coverage percentage is accurate...")
 #result should return 85.71429 as its coverage metric
 CORRECT_COVERAGE = "85.71429"
+print("COVERAGE VALUES")
+print("Expected: " + CORRECT_COVERAGE + "%, Actual: " + coverage_percentage + "%")
+
 if(coverage_percentage == CORRECT_COVERAGE): 
-    print("Success! Codecov's API returned the correct coverage percentage, "+ os.environ['CORRECT_COVERAGE'])
+    print("SUCCESS. Codecov API returned correct coverage percentage.")
     exit(0)
 else:
-    print("Whoops, something is wrong D: Codecov did not return the correct coverage percentage. Coverage percentage should be "+os.environ['CORRECT_COVERAGE']+" but Codecov returned "+coverage_percentage)
+	print("FAILURE. Codecov API did not return correct coverage percentage.")
     exit(1)
