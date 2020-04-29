@@ -10,3 +10,8 @@ def fully_covered():
 def uncovered():
     return True
 
+
+def uncovered1588187291():
+    a = 1
+    return
+
