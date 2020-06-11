@@ -30,3 +30,13 @@ def uncovered1591903333():
     a = 1
     return
 
+
+def uncovered1591910615():
+    a = 1
+    return
+
+
+def uncovered1591911783():
+    a = 1
+    return
+
