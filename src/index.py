@@ -1,3 +1,4 @@
+import asyncio
 def uncovered_if(var=True):
     if var:
       return False
