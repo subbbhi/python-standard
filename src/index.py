@@ -101,3 +101,8 @@ def uncovered1592227864():
     a = 1
     return
 
+
+def uncovered1592876156():
+    a = 1
+    return
+
