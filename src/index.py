@@ -1,3 +1,4 @@
+import asyncio
 def uncovered_if(var=True):
     if var:
       return False
@@ -97,6 +98,11 @@ def uncovered1592163268():
 
 
 def uncovered1592227864():
+    a = 1
+    return
+
+
+def uncovered1592876156():
     a = 1
     return
 
